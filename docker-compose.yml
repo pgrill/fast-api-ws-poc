@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - './web-socket-example:/web-socket-example'
+    ports:
+      - 8000:8000
