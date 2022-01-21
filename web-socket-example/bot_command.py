@@ -19,7 +19,7 @@ class BotCommandManager:
     def change_status(self, transcription: str,
                       stream_bytes: List[bytes]) -> Tuple[Dict, List[bytes]]:
         colors_in_transcription = [
-            color for color in self.color_list if color in transcription
+            color for color in self.color_list if color in transcription.lower()
         ] if transcription else []
 
         if colors_in_transcription:
